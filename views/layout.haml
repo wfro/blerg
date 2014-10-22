@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}
+    %link{:href => "/stylesheets/styles.css", :rel => "stylesheet", :type => "text/css"}
+  %body
+    %div.container
+      %ul.navbar
+        %li.navbar-icon
+          %a{href: "/"}
+            %img{src: "/images/blog-icon.png", alt: "home"}
+        %li.navbar-icon
+          %a{href: "#"}
+            %img{src: "/images/about-icon.png", alt: "home"}
+        %li.navbar-icon
+          %a{href: "#"}
+            %img{src: "/images/twitter-icon.png", alt: "home"}
+        %li.navbar-icon
+          %a{href: "#"}
+            %img{src: "/images/github-icon.png", alt: "home"}
+      =yield

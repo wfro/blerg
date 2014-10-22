@@ -1,0 +1,22 @@
+html {
+  overflow-y: scroll;
+}
+
+.container {
+  text-align: center;
+}
+
+.navbar {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.navbar-icon {
+  float: left;
+}
+
+.navbar-icon a {
+  display: block; /* whole area clickable */
+  padding: 0 20px 0 20px;
+}
+
