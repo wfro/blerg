@@ -7,5 +7,6 @@ class BlergApp < Sinatra::Base
   end
 
   get '/' do
+    haml :index
   end
 end
