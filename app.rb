@@ -7,6 +7,5 @@ class BlergApp < Sinatra::Base
   end
 
   get '/' do
-    "Hello orld"
   end
 end
