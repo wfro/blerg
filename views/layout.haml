@@ -2,7 +2,8 @@
 %html
   %head
     %meta{:charset => "utf-8"}
-    %link{:href => "/stylesheets/styles.css", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "/stylesheets/styles.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Roboto", :rel => "stylesheet", :type => "text/css"}/
   %body
     %div.container
       %ul.navbar
@@ -11,11 +12,11 @@
             %img{src: "/images/blog-icon.png", alt: "home"}
         %li.navbar-icon
           %a{href: "/about"}
-            %img{src: "/images/about-icon.png", alt: "home"}
+            %img{src: "/images/about-icon.png", alt: "about"}
         %li.navbar-icon
           %a{href: "https://twitter.com/will_faurot"}
-            %img{src: "/images/twitter-icon.png", alt: "home"}
+            %img{src: "/images/twitter-icon.png", alt: "twitter"}
         %li.navbar-icon
           %a{href: "https://github.com/wfro"}
-            %img{src: "/images/github-icon.png", alt: "home"}
+            %img{src: "/images/github-icon.png", alt: "github"}
       =yield
