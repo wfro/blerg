@@ -1,5 +1,6 @@
-require 'sinatra'
+require 'sinatra/base'
 require 'sinatra/reloader'
+require 'redcarpet'
 
 class BlergApp < Sinatra::Base
   set :root, File.dirname(__FILE__)
@@ -8,8 +9,12 @@ class BlergApp < Sinatra::Base
     register Sinatra::Reloader
   end
 
+  not_found do
+    haml :error
+  end
+
   get '/' do
-    haml :index
+    haml :index, locals: { blog_text: markdown(:'posts/yart', fenced_code_blocks: true) }
   end
 
   get '/about' do
