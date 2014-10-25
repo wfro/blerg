@@ -1,9 +1,16 @@
 html {
   overflow-y: scroll;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container {
   text-align: center;
+}
+
+.blog-container {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 660px;
 }
 
 .navbar {
@@ -16,7 +23,14 @@ html {
 }
 
 .navbar-icon a {
-  display: block; /* whole area clickable */
+  display: block; /* make the whole area clickable */
   padding: 0 20px 0 20px;
 }
+
+/* links */
+a:hover, a:visited, a:link, a:active {
+  text-decoration: none;
+  color: #9E2020;
+}
+
 
