@@ -14,10 +14,13 @@ class BlergApp < Sinatra::Base
   end
 
   get '/' do
-    haml :index, locals: { blog_text: markdown(:'posts/yart', fenced_code_blocks: true) }
+    haml :index, locals: {
+      blog_text: markdown(:'posts/yart', fenced_code_blocks: true)
+    }
   end
 
   get '/about' do
     haml :about
   end
 end
+
