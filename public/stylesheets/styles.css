@@ -27,12 +27,32 @@ html {
   padding: 0 20px 0 20px;
 }
 
+/* Takes care of inline code */
+code {
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  background: rgba(0,0,0,0.04);
+  padding: 0.3em;
+  border-radius: 3px;
+}
+
+/* Block code */
+pre {
+  padding-top: 20px;
+  padding-left: 20px;
+  background: rgba(0,0,0,0.04);
+  text-align: left;
+}
+
+/* This keeps block code from looking weird */
+.ruby {
+  background: transparent;
+}
+
 /* links */
 a:hover, a:visited, a:link, a:active {
   text-decoration: none;
   color: #9E2020;
 }
-
 
 
 
