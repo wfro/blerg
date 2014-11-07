@@ -23,7 +23,22 @@ class Post
       db['posts'] << { title: title, tags: tags, published_at: published_at }
     end
   end
-  
+
+  def self.all
+    posts = database.transaction do |db|
+      db['posts'] || []
+    end
+    posts.map do |post|
+      Post.new(title: post[:title],
+               tags: post[:tags],
+               published_at: post[:published_at])
+    end
+  end
+
+  def self.last
+    all.last
+  end
+
   private
 
   # posts shouldn't be valid without a timestamp as that's how they'll

@@ -27,7 +27,7 @@ class PostTest < Minitest::Test
     end
   end
 
-  def test_it_has_a_data_store_instance
+  def test_it_has_a_psych_store_instance
     assert_instance_of Psych::Store, Post.database
   end
 
@@ -36,6 +36,19 @@ class PostTest < Minitest::Test
     post.save
     yaml = YAML.load_file 'test/fixtures/manifest'
     assert_equal 'A title', yaml['posts'].first[:title]
+  end
+
+  def test_it_has_a_collection_of_post_objects
+    3.times { Post.new(title: "A title", tags: "tag1, tag2", published_at: Time.now).save }
+    assert_instance_of Array, Post.all
+    assert_instance_of Post, Post.all.first
+    assert_equal Post.all.first.title, 'A title'
+  end
+
+  def test_it_returns_the_most_recent_post
+    post = Post.new(title: "A title", tags: "tag1, tag2", published_at: Time.now).save
+    post = Post.new(title: "Another title", tags: "tag1, tag2", published_at: Time.now).save
+    assert_equal "Another title", Post.last.title
   end
 end
 
