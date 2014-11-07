@@ -17,6 +17,13 @@ class Post
     Post.database
   end
 
+  def save
+    database.transaction do |db|
+      db['posts'] ||= []
+      db['posts'] << { title: title, tags: tags, published_at: published_at }
+    end
+  end
+  
   private
 
   # posts shouldn't be valid without a timestamp as that's how they'll

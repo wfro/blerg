@@ -30,5 +30,12 @@ class PostTest < Minitest::Test
   def test_it_has_a_data_store_instance
     assert_instance_of Psych::Store, Post.database
   end
+
+  def test_it_saves_a_post_to_the_manifest
+    post = Post.new(title: "A title", tags: "tag1, tag2", published_at: Time.now)
+    post.save
+    yaml = YAML.load_file 'test/fixtures/manifest'
+    assert_equal 'A title', yaml['posts'].first[:title]
+  end
 end
 
