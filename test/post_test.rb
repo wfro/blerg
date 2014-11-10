@@ -3,11 +3,11 @@ require_relative '../lib/post'
 
 class PostTest < Minitest::Test
   def setup
-    Post.database 'test/fixtures/manifest'
+    Post.database
   end
 
   def teardown
-    File.open('./test/fixtures/manifest', 'w') { |file| file.truncate(0) }
+    File.open('./db/test_manifest', 'w') { |file| file.truncate(0) }
   end
 
   def test_it_saves_attributes_correctly
@@ -44,7 +44,7 @@ class PostTest < Minitest::Test
   def test_it_saves_a_post_to_the_manifest
     post = Post.new(title: "A title", tags: "tag1, tag2", published_at: Time.now, filename: 'blog_post')
     post.save
-    yaml = YAML.load_file 'test/fixtures/manifest'
+    yaml = YAML.load_file 'db/test_manifest'
     assert_equal 'A title', yaml['posts'].first[:title]
   end
 

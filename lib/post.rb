@@ -10,12 +10,19 @@ class Post
     set_published_timestamp(published_at)
   end
 
-  def self.database(file_path = 'manifest')
-    @database ||= YAML::Store.new file_path
+  def self.database
+    case ENV['RACK_ENV']
+    when 'production'
+      @database ||= YAML::Store.new 'db/production_manifest'
+    when 'development'
+      @database ||= YAML::Store.new 'db/developemnt_manifest'
+    when 'test'
+      @database ||= YAML::Store.new 'db/test_manifest'
+    end
   end
 
-  def database(file_path = 'manifest')
-    Post.database file_path
+  def database
+    Post.database
   end
 
   def save
