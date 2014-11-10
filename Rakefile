@@ -13,6 +13,7 @@ namespace :post do
   # and pass in the name/value pairs title and tags.
   #   $ rake post:add title="A cool title" tags="such code" filename="post.md"
   task :add do |task, args|
+    ENV['RACK_ENV'] = 'production'
     post = Post.new(title: ENV['title'],
                     tags: ENV['tags'],
                     filename: ENV['filename'],
