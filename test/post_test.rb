@@ -52,7 +52,7 @@ class PostTest < Minitest::Test
     3.times { Post.new(title: "A title", tags: "tag1, tag2", published_at: Time.now, filename: 'blog_post').save }
     assert_instance_of Array, Post.all
     assert_instance_of Post, Post.all.first
-    assert_equal Post.all.first.title, 'A title'
+    assert_equal 'A title', Post.all.first.title
   end
 
   def test_it_returns_the_most_recent_post

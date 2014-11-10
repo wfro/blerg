@@ -53,8 +53,9 @@ class Post
   def set_published_timestamp(published_at)
     if published_at.nil?
       raise ArgumentError, 'You must provide a timestamp when creating a post.'
+    else
+      @published_at = published_at
     end
-    @published_at = published_at
   end
 
   # filenames will be read and passed to the markdown parser, so we
