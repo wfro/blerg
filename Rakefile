@@ -25,4 +25,13 @@ namespace :post do
     puts "Published at: #{post.published_at.strftime("%B %d, %H:%M")}"
     puts "Post added!"
   end
+
+  task :list do
+    posts = Post.all
+    posts.each do |post|
+      puts "Title: #{post.title}"
+      puts "Tags: #{post.tags}"
+      puts "Published at: #{post.published_at.strftime("%B %d, %H:%M")}"
+    end
+  end
 end
