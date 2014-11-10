@@ -6,7 +6,7 @@ class Post
   def initialize(title: '', tags: '', published_at: nil, filename: nil)
     @title = title
     @tags  = tags
-    @filename = filename
+    set_filename(filename)
     set_published_timestamp(published_at)
   end
 
@@ -37,6 +37,7 @@ class Post
     posts.map do |post|
       Post.new(title: post[:title],
                tags: post[:tags],
+               filename: post[:filename],
                published_at: post[:published_at])
     end
   end
@@ -54,5 +55,15 @@ class Post
       raise ArgumentError, 'You must provide a timestamp when creating a post.'
     end
     @published_at = published_at
+  end
+
+  # filenames will be read and passed to the markdown parser, so we
+  # need to validate them
+  def set_filename(filename)
+    if filename.nil?
+      raise ArgumentError, 'Provide a filename for your post.'
+    else
+      @filename = filename
+    end
   end
 end
