@@ -24,5 +24,9 @@ class BlergApp < Sinatra::Base
   get '/about' do
     haml :about
   end
+
+  get '/archive' do
+    haml :archive, locals: { posts: Post.all }
+  end
 end
 
