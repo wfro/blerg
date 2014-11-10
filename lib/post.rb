@@ -1,11 +1,12 @@
 require 'yaml/store'
 
 class Post
-  attr_reader :title, :tags, :published_at
+  attr_reader :title, :tags, :published_at, :filename
 
-  def initialize(title: '', tags: '', published_at: nil)
+  def initialize(title: '', tags: '', published_at: nil, filename: nil)
     @title = title
     @tags  = tags
+    @filename = filename
     set_published_timestamp(published_at)
   end
 
@@ -20,7 +21,12 @@ class Post
   def save
     database.transaction do |db|
       db['posts'] ||= []
-      db['posts'] << { title: title, tags: tags, published_at: published_at }
+      db['posts'] << {
+        title: title,
+        tags: tags,
+        published_at: published_at,
+        filename: filename
+      }
     end
   end
 
