@@ -14,8 +14,8 @@ class Post
     @database ||= YAML::Store.new file_path
   end
 
-  def database
-    Post.database
+  def database(file_path = 'manifest')
+    Post.database file_path
   end
 
   def save
