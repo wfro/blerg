@@ -2,6 +2,7 @@ require 'sinatra/base'
 require 'sinatra/reloader'
 require 'redcarpet'
 require 'haml'
+require_relative 'lib/post'
 
 class BlergApp < Sinatra::Base
   set :root, File.dirname(__FILE__)
