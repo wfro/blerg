@@ -17,7 +17,7 @@ class BlergApp < Sinatra::Base
 
   get '/' do
     haml :index, locals: {
-      blog_text: markdown(:'posts/yart', fenced_code_blocks: true)
+      blog_text: markdown(:"posts/#{Post.last.filename}", fenced_code_blocks: true)
     }
   end
 
