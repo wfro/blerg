@@ -41,6 +41,8 @@ class Post
     posts = database.transaction do |db|
       db['posts'] || []
     end
+
+    # return a collection of post objects instead of hashes for convenience
     posts.map do |post|
       Post.new(title: post[:title],
                tags: post[:tags],
@@ -56,7 +58,7 @@ class Post
   private
 
   # posts shouldn't be valid without a timestamp as that's how they'll
-  # be sorted usually
+  # be sorted
   def set_published_timestamp(published_at)
     if published_at.nil?
       raise ArgumentError, 'You must provide a timestamp when creating a post.'
