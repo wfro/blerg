@@ -11,7 +11,7 @@ I much prefer to write posts in my usual text editor.
 
 * Write markdown like you normally would (including code blocks made available by github markdown)
 * Copy the files into `views/posts`
-* run `$ rake post:add filename="my\_cool\_blog\_post"
+* run `$ rake post:add filename="my\_cool\_blog\_post"`
 
 ### TODO
 
