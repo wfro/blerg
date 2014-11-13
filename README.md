@@ -3,7 +3,7 @@
 Super simple cms meant for blog content.  It's equal parts a learning exercise and
 a desire to have something more stripped down, only what I need and nothing I don't.
 It's currently a [Sinatra](https://github.com/sinatra/sinatra) application using [Redcarpet](https://github.com/vmg/redcarpet)
-to render github-flavored markdown.  It uses `yaml/store` 
+to render github-flavored markdown.  It uses `yaml/store` for persistent metadata storage.
 
 ### How it does its thing
 
