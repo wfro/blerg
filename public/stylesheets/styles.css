@@ -39,6 +39,7 @@ code {
 pre {
   padding-top: 20px;
   padding-left: 20px;
+  padding-bottom: 20px;
   background: rgba(0,0,0,0.04);
   text-align: left;
 }
@@ -53,6 +54,4 @@ a:hover, a:visited, a:link, a:active {
   text-decoration: none;
   color: #9E2020;
 }
-
-
 
