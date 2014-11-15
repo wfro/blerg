@@ -1,6 +1,16 @@
-One lesson learned early on in application development is that it's not just about writing your own code, it's about knowing when to use existing libraries.  For our purposes we'll define a library (a 'gem' in the wonderful world of Ruby) as simply a collection of resources (including source code) written by someone else that we can use in our own programming endeavours.
+One lesson learned early on in application development is that it's not just
+about writing your own code, it's about knowing when to use existing libraries.
+For our purposes we'll define a library (a 'gem' in the wonderful world of
+Ruby) as simply a collection of resources (including source code) written by
+someone else that we can use in our own programming endeavours.
 
-Today I thought I'd share with you a few gems that have made their way into nearly all of my rails projects.  The first two are helpful for debugging, and the final two are for testing.  In order of appearance they are: [pry](https://github.com/pry/pry), [better errors](https://github.com/charliesome/better_errors), [rspec](https://www.relishapp.com/rspec), and [capybara](https://github.com/jnicklas/capybara).
+Today I thought I'd share with you a few gems that have made their way into
+nearly all of my rails projects.  The first two are helpful for debugging, and
+the final two are for testing.  In order of appearance they are:
+[pry](https://github.com/pry/pry), [better
+errors](https://github.com/charliesome/better_errors),
+[rspec](https://www.relishapp.com/rspec), and
+[capybara](https://github.com/jnicklas/capybara).
 
 # Pry
 
@@ -20,19 +30,19 @@ end
 
 When we trigger that action the pry console should drop us right into the code with access to the value of the `@article` instance variable at that point in the program's execution.
 
-{<1>}![pry](https://i.imgur.com/4cBqglR.png)
+![pry](https://i.imgur.com/4cBqglR.png)
 
 ## Better Errors
 
 The Rails error page is something you'll get used to seeing a lot, and it's much more helpful with Better Errors.  Here is an example error screen:
 
-{<2>}![better errors](https://camo.githubusercontent.com/3fa6840d5e20236b4f768d6ed4b42421ba7c2f21/68747470733a2f2f692e696d6775722e636f6d2f367a42474141622e706e67)
+![better errors](https://camo.githubusercontent.com/3fa6840d5e20236b4f768d6ed4b42421ba7c2f21/68747470733a2f2f692e696d6775722e636f6d2f367a42474141622e706e67)
 
 I'd 100% recommend adding [binding of caller](https://github.com/banister/binding_of_caller) in addition to Better Errors, as it grants you access to 'advanced' features, such as access to the REPL and local/instance variable inspection.  I really can't emphasize enough how valuable of a tool it is to be able to poke around your code with all of your variables still in scope.
 
 ## RSpec
 
-RSpec is a ruby library for testing that encourages human readability (Check out [this](http://rspec.info/) to get started).  I'll leave it up to you to decide which testing frameworks you like best, but know that RSpec is popular in large part because of the kind of syntax it defines.  I'd recommend browsing some RSpec source to see if you find it particularly readable, if you enjoy speaking RSpec's 'language' then you might consider using it in your own projects.  
+RSpec is a ruby library for testing that encourages human readability (Check out [this](http://rspec.info/) to get started).  I'll leave it up to you to decide which testing frameworks you like best, but know that RSpec is popular in large part because of the kind of syntax it defines.  I'd recommend browsing some RSpec source to see if you find it particularly readable, if you enjoy speaking RSpec's 'language' then you might consider using it in your own projects.
 
 Wiring RSpec in rails the first few times can be a little hairy (I'm not prepared to admit how often I forget to tack `--skip-test-unit` on `rails new`).  From the beginning:
 
