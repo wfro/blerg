@@ -9,3 +9,7 @@ gem 'redcarpet'
 gem 'capybara'
 gem 'pry'
 gem 'guard-minitest'
+
+group :production do
+  gem 'thin'
+end
