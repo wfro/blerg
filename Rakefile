@@ -22,10 +22,12 @@ namespace :post do
                     published_at: Time.now)
     post.save
 
-    puts "Post added with:"
-    puts "Title: #{post.title}"
-    puts "Tags: #{post.tags}"
-    puts "Published at: #{post.published_at.strftime("%B %d, %H:%M")}"
+    puts "Adding post..."
+    puts
+    puts ">  Title: #{post.title}"
+    puts ">  Tags: #{post.tags}"
+    puts ">  Published at: #{post.published_at.strftime("%B %d, %H:%M")}"
+    puts
     puts "Post added!"
   end
 
