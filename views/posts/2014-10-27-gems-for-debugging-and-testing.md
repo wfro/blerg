@@ -1,3 +1,5 @@
+# Rails Gems for Debugging and Testing
+
 One lesson learned early on in application development is that it's not just
 about writing your own code, it's about knowing when to use existing libraries.
 For our purposes we'll define a library (a 'gem' in the wonderful world of

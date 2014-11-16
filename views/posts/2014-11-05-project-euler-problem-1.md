@@ -1,4 +1,6 @@
-I've been trying to improve my algorithmic thinking and thought it would be a perfect time to revisit the awesomeness that is Project Euler.  When I was first starting out I did the first few problems in python, but abandoned PE in favor of other learning adventures.  Now that I've been programming for a while I feel like I'm at a good place to tackle the more difficult algorithms (and now in multiple languages!).  
+# Project Euler, Problem 1
+
+I've been trying to improve my algorithmic thinking and thought it would be a perfect time to revisit the awesomeness that is Project Euler.  When I was first starting out I did the first few problems in python, but abandoned PE in favor of other learning adventures.  Now that I've been programming for a while I feel like I'm at a good place to tackle the more difficult algorithms (and now in multiple languages!).
 
 Each post will wholly contain everything related to a particular problem, with a combination of solutions in Ruby, Javascript, and Clojure (I'd rank my language expertise in that order).  So, I won't consider myself victorious until we reach post 50!  Hopefully I'll do better than Sufjan Stevens and the 50 states.  The posts themselves I'd like to evolve over time as I come across new interesting ways to solve a particular problem.
 
@@ -7,7 +9,7 @@ Project Euler is a fun way to see how different hammers can be used for the same
 The first few problems are suited to exploring some fundamental ideas including mutable/immutable state, and different techniques for iteration.  You can find [Problem 1](https://projecteuler.net/problem=1) here.  Our goal:
 
 ```
-If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. 
+If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 
 Find the sum of all the multiples of 3 or 5 below 1000.
 ```

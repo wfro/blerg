@@ -1,8 +1,10 @@
+# Clojure Workshop for Posterity
+
 A quick intro after the fact, I recently ran a two hour intro to Clojure workshop for my fellow students at [Turing](http://turing.io).  I thought it would be a good idea to post the gist we used as a guide.  This is crafted largely (nearly 100%) from the great content in Daniel Higginbotham's book [Clojure for the Brave and True](http://www.braveclojure.com/).  Read it, it's amazing.
 
 HI.
 
-[Clojure on wikipedia](https://en.wikipedia.org/wiki/Clojure)  
+[Clojure on wikipedia](https://en.wikipedia.org/wiki/Clojure)
 [Offical docs](http://clojure.org/)
 
 # Install the JDK/Clojure
@@ -92,7 +94,7 @@ You can do this in ruby:
 stuff = ['snape', 'killed', 'harry potter']
 stuff[0] = 'roger rabbit'
 
-stuff 
+stuff
 ; => ['roger rabbit', 'killed', 'harry potter']
 ```
 
@@ -190,7 +192,7 @@ As mentioned all 'operations' (functions) are uniform: adding two numbers is the
 (map square [1 2 3 4])
 ```
 
-As seen above, to define a function in clojure, you'll use defn, the function name, a list of arguments within square brackets, and a function body.  
+As seen above, to define a function in clojure, you'll use defn, the function name, a list of arguments within square brackets, and a function body.
 
 ##### Control flow
 
@@ -241,7 +243,7 @@ Say you have a collection ["word" "another word" "and another word"].  Often you
   [useful-item & non-useful-items]
   (str "I def need my " useful-item)
   (str "I def don't need this stuff: " (clojure.string/join ", " non-useful-items)))
-  
+
 (oregon-trail "guns" "malaria" "broken wheels")
 ; => "I def need my guns"
 ; => "I def don't need this stuff: malaria, broken wheels"
