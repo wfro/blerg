@@ -29,5 +29,12 @@ class BlergApp < Sinatra::Base
   get '/archive' do
     haml :archive, locals: { posts: Post.all }
   end
+
+  get '/:post' do |post|
+    post = Post.all.detect { |p| p.filename == post }
+    haml :post, locals: { 
+      blog_text: markdown(:"posts/#{post.filename}", fenced_code_blocks: true) 
+    }
+  end
 end
 
