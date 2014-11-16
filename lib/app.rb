@@ -2,10 +2,11 @@ require 'sinatra/base'
 require 'sinatra/reloader'
 require 'redcarpet'
 require 'haml'
-require_relative 'lib/post'
+require_relative 'post'
 
 class BlergApp < Sinatra::Base
   set :root, File.dirname(__FILE__)
+  set :public_folder, File.dirname(__FILE__) + '/public'
 
   configure :development do
     register Sinatra::Reloader

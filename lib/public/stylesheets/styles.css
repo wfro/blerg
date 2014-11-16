@@ -10,6 +10,7 @@ img {
 
 .container {
   text-align: center;
+  margin-bottom: 60px;
 }
 
 .blog-container {
@@ -62,20 +63,13 @@ a:hover, a:visited, a:link, a:active {
 
 /* footer */
 footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #777;
   position: fixed;
-  bottom: 0;
-}
-
-footer a {
-  color: #555;
-}
-
-footer a:hover {
-  color: #222;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  padding-top: 5px;
+  padding-left: 10px;
+  color: #999;
 }
 
 footer small {

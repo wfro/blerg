@@ -1,4 +1,4 @@
-require './app'
+require './lib/app'
 
 ENV['RACK_ENV'] = 'production'
 
