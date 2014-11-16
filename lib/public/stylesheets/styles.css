@@ -59,7 +59,7 @@ pre {
 }
 
 /* This keeps block code from looking weird */
-.ruby {
+.ruby, .javascript, .shell, .clojure {
   background: transparent;
 }
 

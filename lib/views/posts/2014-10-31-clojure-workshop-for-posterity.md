@@ -42,8 +42,11 @@ $ lein repl
 
 [Wikipedia is smart](https://en.wikipedia.org/wiki/Functional_programming):
 
-```hi
-In computer science, functional programming is a programming paradigm, a style of building the structure and elements of computer programs, that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data.
+```shell
+In computer science, functional programming is a programming paradigm, a style 
+of building the structure and elements of computer programs, that treats 
+computation as the evaluation of mathematical functions and avoids changing-state 
+and mutable data.
 ```
 
 The main high level things to take away:
@@ -257,7 +260,7 @@ A super simple example:
 
 ```clojure
 (let [x 1
-    y 2]
+      y 2]
   (+ x y))
 ; => 3
 ```

@@ -8,7 +8,7 @@ Project Euler is a fun way to see how different hammers can be used for the same
 
 The first few problems are suited to exploring some fundamental ideas including mutable/immutable state, and different techniques for iteration.  You can find [Problem 1](https://projecteuler.net/problem=1) here.  Our goal:
 
-```
+```ruby
 If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 
 3, 5, 6 and 9. The sum of these multiples is 23.
 
@@ -17,7 +17,7 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 
 So not so bad, right?  First we'll use an [imperative](en.wikipedia.org/wiki/Imperative_programming) approach.  From wikipedia:
 
-```
+```ruby
 In computer science terminologies, imperative programming is a programming 
 paradigm that describes computation in terms of statements that change a program 
 state.
@@ -29,7 +29,7 @@ With problem 1, it's apparent we'll need to track some kind of running total.  W
 
 Pseudocode ahoy:
 
-```
+```ruby
 # Generate an array from 1 up to 1000 exclusive
 # Initialize a variable to store our running total
 # Iterate over each element in the collection
