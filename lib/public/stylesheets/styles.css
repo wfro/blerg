@@ -22,15 +22,17 @@ img {
 .navbar {
   list-style-type: none;
   display: inline-block;
+  padding: 0;
 }
 
-.navbar-icon {
+.navbar-link {
   float: left;
 }
 
-.navbar-icon a {
+.navbar-link a {
   display: block; /* make the whole area clickable */
   padding: 0 20px 0 20px;
+  font: 2em Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
 /* Takes care of inline code */
