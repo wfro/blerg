@@ -1,10 +1,18 @@
 ---
 posts:
-- :title: 
+- :title: Super Fun Rails Gems for Debugging and Testing
   :tags: 
-  :published_at: 2014-11-10 12:46:52.707260000 -07:00
-  :filename: yart
-- :title: 
+  :published_at: 2014-11-15 15:50:14.844773000 -07:00
+  :filename: 2014-10-27-gems-for-debugging-and-testing
+- :title: Clojure Workshop for Posterity
   :tags: 
-  :published_at: 2014-11-15 12:46:16.726531000 -07:00
-  :filename: yart
+  :published_at: 2014-11-15 16:10:22.216368000 -07:00
+  :filename: 2014-10-31-clojure-workshop-for-posterity
+- :title: Project Euler, Problem 1
+  :tags: 
+  :published_at: 2014-11-15 16:11:53.314827000 -07:00
+  :filename: 2014-11-05-project-euler-problem-1
+- :title: Video Games, or How I Learned to Stop Worrying and Love Keybinds
+  :tags: 
+  :published_at: 2014-11-15 16:14:10.327956000 -07:00
+  :filename: 2014-11-15-keybinds
