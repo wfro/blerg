@@ -7,16 +7,15 @@ to render github-flavored markdown.  It uses `yaml/store` for persistent metadat
 
 ### How it does its thing
 
-I much prefer to write posts in my usual text editor, and that was the driving force behind this design.
+The workflow of adding posts came from my preference of writing posts in my usual text editor.  
 
-* Write markdown like you normally would (including code blocks made available by github markdown)
-* Copy the files into `views/posts`
+* Write markdown like you normally would (including both inline code and fenced code blocks made available in github markdown)
+* Copy markdown files into `views/posts`
 * `$ rake post:add filename="my_cool_blog_post" title="My Cool Blog Post"`
 
 
-### TODO
+### Things to make it better
 
-- Larger formatted code blocks in markdown are currently indented weirdly on the index page
 - Syntax highlighting for code blocks
 - Yaml frontmatter parsing
 
