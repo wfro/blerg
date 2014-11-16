@@ -1,5 +1,5 @@
 require_relative '../test_helper'
-require_relative '../../app'
+require_relative '../../lib/app'
 require 'capybara'
 
 
@@ -11,5 +11,6 @@ class FeatureTest < Minitest::Test
   def teardown
     Capybara.reset_sessions!
     Capybara.use_default_driver
+    File.open('./db/test_manifest', 'w') { |file| file.truncate(0) }
   end
 end
