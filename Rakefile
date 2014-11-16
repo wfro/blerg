@@ -1,5 +1,5 @@
 require 'rake/testtask'
-require_relative 'app'
+require_relative 'lib/app'
 
 Rake::TestTask.new do |t|
   t.pattern = "test/**/*_test.rb"
@@ -11,11 +11,14 @@ namespace :post do
 
   # Right now to add a post to the datastore you'll invoke rake task
   # and pass in the name/value pairs title and tags.
-  #   $ rake post:add title="A cool title" tags="such code" filename="post.md"
+  #   $ rake post:add title="A Creative Blog Title" filename='creative_blog_title'
+  # It's important that the filename you enter match the actual filename exactly,
+  # and make sure to leave off the file extension.
   task :add do |task, args|
-    unless ENV['RACK_ENV']
-      ENV['RACK_ENV'] = 'production'
-    end
+
+    # Allow alternate environments to be set from the command line
+    ENV['RACK_ENV'] = 'production' unless ENV['RACK_ENV']
+    
     post = Post.new(title: ENV['title'],
                     tags: ENV['tags'],
                     filename: ENV['filename'],
