@@ -60,3 +60,23 @@ a:hover, a:visited, a:link, a:active {
   color: #9E2020;
 }
 
+/* footer */
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+  margin-bottom: 10px;
+}
