@@ -9,7 +9,8 @@ Project Euler is a fun way to see how different hammers can be used for the same
 The first few problems are suited to exploring some fundamental ideas including mutable/immutable state, and different techniques for iteration.  You can find [Problem 1](https://projecteuler.net/problem=1) here.  Our goal:
 
 ```
-If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 
+3, 5, 6 and 9. The sum of these multiples is 23.
 
 Find the sum of all the multiples of 3 or 5 below 1000.
 ```
@@ -17,7 +18,9 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 So not so bad, right?  First we'll use an [imperative](en.wikipedia.org/wiki/Imperative_programming) approach.  From wikipedia:
 
 ```
-In computer science terminologies, imperative programming is a programming paradigm that describes computation in terms of statements that change a program state.
+In computer science terminologies, imperative programming is a programming 
+paradigm that describes computation in terms of statements that change a program 
+state.
 ```
 
 Both procedural (C) and object-oriented (java, ruby) programming fall under the umbrella of imperative programming.  There are two main things to think about: imperative programming describes "how" to accomplish some goal, and it's big concern is tracking changes in state.  Essentially you tell the computer "how" to solve a problem by giving the computer very specific tasks which achieve some desired goal.
