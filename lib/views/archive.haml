@@ -1,4 +1,4 @@
 .archive-container
   - posts.each do |post|
     %h3
-      %a{href: '#'}= "#{post.title} (#{post.published_at.strftime("%B %d, %Y")})"
+      %a.archive-links{href: '#'}= "#{post.title} (#{post.published_at.strftime("%B %d, %Y")})"

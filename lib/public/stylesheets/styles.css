@@ -35,6 +35,12 @@ img {
   font: 2em Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
+.archive-container h3 a {
+  text-align: left;
+  text-decoration: underline;
+  color: black;
+}
+
 /* Takes care of inline code */
 code {
   font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
